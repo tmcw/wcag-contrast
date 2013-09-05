@@ -1,0 +1,33 @@
+{
+  "name": "wcag-contrast",
+  "version": "0.0.0",
+  "description": "evaluate the wcag color contrast score for two colors",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tmcw/wcag-contrast.git"
+  },
+  "keywords": [
+    "color",
+    "contrast",
+    "wcag"
+  ],
+  "author": "Tom MacWright",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/tmcw/wcag-contrast/issues"
+  },
+  "dependencies": {
+    "relative-luminance": "0.0.0"
+  },
+  "devDependencies": {
+    "expect.js": "~0.2.0",
+    "mocha": "~1.12.1"
+  }
+}
