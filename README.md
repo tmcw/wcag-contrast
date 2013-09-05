@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tmcw/wcag-contrast.png)](https://travis-ci.org/tmcw/wcag-contrast)
+
 ## wcag color constrast
 
 [WCAG](http://www.w3.org/WAI/intro/wcag.php) [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef)
