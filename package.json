@@ -24,7 +24,8 @@
     "url": "https://github.com/tmcw/wcag-contrast/issues"
   },
   "dependencies": {
-    "relative-luminance": "0.0.0"
+    "relative-luminance": "0.0.0",
+    "hex-rgb": "~1.0.0"
   },
   "devDependencies": {
     "expect.js": "~0.2.0",

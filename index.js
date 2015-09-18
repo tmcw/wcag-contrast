@@ -1,9 +1,11 @@
 var luminance = require('relative-luminance');
+var hexRgb = require('hex-rgb');
 
 // http://www.w3.org/TR/WCAG20/#contrast-ratiodef
 
 module.exports.luminance = fromLum;
 module.exports.rgb = fromRGB;
+module.exports.hex = fromHex;
 module.exports.score = score;
 
 /*
@@ -24,6 +26,15 @@ function fromLum(a, b) {
  */
 function fromRGB(a, b) {
     return fromLum(luminance(a), luminance(b));
+}
+
+/*
+ * @param {string} a hex value
+ * @param {string} b hex value
+ * @returns {number} contrast ratio
+ */
+function fromHex(a, b) {
+    return fromRGB(hexRgb(a), hexRgb(b));
 }
 
 /*

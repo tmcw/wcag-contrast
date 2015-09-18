@@ -4,6 +4,9 @@ var expect = require('expect.js'),
 var white = [255, 255, 255];
 var black = [0, 0, 0];
 
+var whiteHex = '#ffffff';
+var blackHex = '#000000';
+
 describe('contrast', function() {
     describe('#score', function() {
         it('zero contrast', function() {
@@ -32,6 +35,15 @@ describe('contrast', function() {
         });
         it('opposite luminance', function() {
             expect(contrast.luminance(1, 0)).to.eql(21);
+        });
+    });
+
+    describe('#hex', function() {
+        it('same color', function() {
+            expect(contrast.hex(whiteHex, whiteHex)).to.eql(1);
+        });
+        it('opposite luminance', function() {
+            expect(contrast.hex(whiteHex, blackHex)).to.eql(21);
         });
     });
 });
