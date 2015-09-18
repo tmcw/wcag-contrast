@@ -46,5 +46,4 @@ describe('contrast', function() {
             expect(contrast.hex(whiteHex, blackHex)).to.eql(21);
         });
     });
-
 });
