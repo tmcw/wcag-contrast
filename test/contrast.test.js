@@ -43,7 +43,7 @@ describe('contrast', function() {
             expect(contrast.hex(whiteHex, whiteHex)).to.eql(1);
         });
         it('opposite luminance', function() {
-            expect(contrast.hex(blackHex, blackHex)).to.eql(21);
+            expect(contrast.hex(whiteHex, blackHex)).to.eql(21);
         });
     });
 });
