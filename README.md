@@ -15,6 +15,10 @@ Return contrast as a numeric ratio given two relative luminances
 
 Return contrast as a numeric ratio given two rgb triplets
 
+### `hex(a, b)`
+
+Return contrast as a numeric ratio given two hex values
+
 ### `score(contrast)`
 
 Return score in ('AAA', 'AA', '') given contrast ratio as number.
