@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/tmcw/wcag-contrast.png)](https://travis-ci.org/tmcw/wcag-contrast)
+[![Build Status](https://travis-ci.org/tmcw/wcag-contrast.svg)](https://travis-ci.org/tmcw/wcag-contrast)
 
 ## wcag color constrast
 
