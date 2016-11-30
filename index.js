@@ -13,6 +13,8 @@ module.exports.score = score;
  * @param {number} a luminance value
  * @param {number} b luminance value
  * @returns {number} contrast ratio
+ * @example
+ * luminance(1, 1); // = 1
  */
 function luminance(a, b) {
     var l1 = Math.max(a, b),
@@ -25,6 +27,8 @@ function luminance(a, b) {
  * @param {array} a
  * @param {array} b
  * @returns {number} contrast ratio
+ * @example
+ * rgb([0, 0, 0], [255, 255, 255]); // = 21
  */
 function rgb(a, b) {
     return luminance(relativeLuminance(a), relativeLuminance(b));
@@ -35,6 +39,8 @@ function rgb(a, b) {
  * @param {string} a hex value
  * @param {string} b hex value
  * @returns {number} contrast ratio
+ * @example
+ * hex('#000', '#fff'); // = 21
  */
 function hex(a, b) {
     return rgb(hexRgb(a), hexRgb(b));
@@ -44,6 +50,8 @@ function hex(a, b) {
  * Get a textual score from a numeric contrast value
  * @param {number} contrast
  * @returns {string} score
+ * @example
+ * score(10); // = 'AAA'
  */
 function score(contrast) {
     return (contrast >= 7) ? 'AAA' : (contrast >= 4.5) ? 'AA' : '';

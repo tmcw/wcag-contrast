@@ -18,6 +18,12 @@ Get the contrast ratio between two relative luminance values
 -   `a` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** luminance value
 -   `b` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** luminance value
 
+**Examples**
+
+```javascript
+luminance(1, 1); // = 1
+```
+
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** contrast ratio
 
 #### rgb
@@ -28,6 +34,12 @@ Get a score for the contrast between two colors as rgb triplets
 
 -   `a` **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
 -   `b` **[array](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)** 
+
+**Examples**
+
+```javascript
+rgb([0, 0, 0], [255, 255, 255]); // = 21
+```
 
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** contrast ratio
 
@@ -40,6 +52,12 @@ Get a score for the contrast between two colors as hex strings
 -   `a` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** hex value
 -   `b` **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** hex value
 
+**Examples**
+
+```javascript
+hex('#000', '#fff'); // = 21
+```
+
 Returns **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** contrast ratio
 
 #### score
@@ -50,23 +68,13 @@ Get a textual score from a numeric contrast value
 
 -   `contrast` **[number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number)** 
 
+**Examples**
+
+```javascript
+score(10); // = 'AAA'
+```
+
 Returns **[string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)** score
-
-### `luminance(a, b)`
-
-Return contrast as a numeric ratio given two relative luminances
-
-### `rgb(a, b)`
-
-Return contrast as a numeric ratio given two rgb triplets
-
-### `hex(a, b)`
-
-Return contrast as a numeric ratio given two hex values
-
-### `score(contrast)`
-
-Return score in ('AAA', 'AA', '') given contrast ratio as number.
 
 ### example
 
