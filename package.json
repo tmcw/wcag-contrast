@@ -20,7 +20,7 @@
     "wcag"
   ],
   "author": "Tom MacWright",
-  "license": "BSD",
+  "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/tmcw/wcag-contrast/issues"
   },
