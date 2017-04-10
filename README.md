@@ -2,6 +2,8 @@
 
 ## wcag color constrast
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/wcag-contrast.svg)](https://greenkeeper.io/)
+
 [WCAG](http://www.w3.org/WAI/intro/wcag.php) [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef)
 measurement and scoring.
 
