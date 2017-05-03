@@ -1,5 +1,5 @@
-var relativeLuminance = require('relative-luminance');
-var hexRgb = require('hex-rgb');
+var relativeLuminance = require("relative-luminance");
+var hexRgb = require("hex-rgb");
 
 // http://www.w3.org/TR/WCAG20/#contrast-ratiodef
 
@@ -17,9 +17,9 @@ module.exports.score = score;
  * luminance(1, 1); // = 1
  */
 function luminance(a, b) {
-    var l1 = Math.max(a, b),
-        l2 = Math.min(a, b);
-    return (l1 + 0.05) / (l2 + 0.05);
+  var l1 = Math.max(a, b);
+  var l2 = Math.min(a, b);
+  return (l1 + 0.05) / (l2 + 0.05);
 }
 
 /**
@@ -31,7 +31,7 @@ function luminance(a, b) {
  * rgb([0, 0, 0], [255, 255, 255]); // = 21
  */
 function rgb(a, b) {
-    return luminance(relativeLuminance(a), relativeLuminance(b));
+  return luminance(relativeLuminance(a), relativeLuminance(b));
 }
 
 /**
@@ -43,7 +43,7 @@ function rgb(a, b) {
  * hex('#000', '#fff'); // = 21
  */
 function hex(a, b) {
-    return rgb(hexRgb(a), hexRgb(b));
+  return rgb(hexRgb(a), hexRgb(b));
 }
 
 /**
@@ -54,5 +54,5 @@ function hex(a, b) {
  * score(10); // = 'AAA'
  */
 function score(contrast) {
-    return (contrast >= 7) ? 'AAA' : (contrast >= 4.5) ? 'AA' : '';
+  return contrast >= 7 ? "AAA" : contrast >= 4.5 ? "AA" : "";
 }
