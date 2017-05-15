@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "documentation": "4.0.0-rc.1",
-    "expect.js": "~0.3.1",
-    "mocha": "~3.4.1"
+    "expect.js": "^0.3.1",
+    "mocha": "^3.4.1"
   }
 }
