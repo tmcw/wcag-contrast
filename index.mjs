@@ -1,12 +1,5 @@
-var relativeLuminance = require("relative-luminance");
-var hexRgb = require("hex-rgb");
-
-// http://www.w3.org/TR/WCAG20/#contrast-ratiodef
-
-module.exports.luminance = luminance;
-module.exports.rgb = rgb;
-module.exports.hex = hex;
-module.exports.score = score;
+import relativeLuminance from "relative-luminance";
+import hexRgb from "hex-rgb";
 
 /**
  * Get the contrast ratio between two relative luminance values
@@ -16,9 +9,9 @@ module.exports.score = score;
  * @example
  * luminance(1, 1); // = 1
  */
-function luminance(a, b) {
-  var l1 = Math.max(a, b);
-  var l2 = Math.min(a, b);
+export function luminance(a, b) {
+  const l1 = Math.max(a, b);
+  const l2 = Math.min(a, b);
   return (l1 + 0.05) / (l2 + 0.05);
 }
 
@@ -30,7 +23,7 @@ function luminance(a, b) {
  * @example
  * rgb([0, 0, 0], [255, 255, 255]); // = 21
  */
-function rgb(a, b) {
+export function rgb(a, b) {
   return luminance(relativeLuminance(a), relativeLuminance(b));
 }
 
@@ -42,7 +35,7 @@ function rgb(a, b) {
  * @example
  * hex('#000', '#fff'); // = 21
  */
-function hex(a, b) {
+export function hex(a, b) {
   return rgb(hexRgb(a), hexRgb(b));
 }
 
@@ -53,6 +46,6 @@ function hex(a, b) {
  * @example
  * score(10); // = 'AAA'
  */
-function score(contrast) {
+export function score(contrast) {
   return contrast >= 7 ? "AAA" : contrast >= 4.5 ? "AA" : "";
 }

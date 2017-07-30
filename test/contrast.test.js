@@ -1,49 +1,50 @@
-var expect = require("expect.js");
-var contrast = require("../");
+var { hex, luminance, score, rgb } = require("../");
+require("tap").mochaGlobals();
+var should = require("should");
 
-var white = [255, 255, 255];
-var black = [0, 0, 0];
+const white = [255, 255, 255];
+const black = [0, 0, 0];
 
-var whiteHex = "#ffffff";
-var blackHex = "#000000";
+const whiteHex = "#ffffff";
+const blackHex = "#000000";
 
-describe("contrast", function() {
-  describe("#score", function() {
-    it("zero contrast", function() {
-      expect(contrast.score(0)).to.eql("");
+describe("contrast", () => {
+  describe("#score", () => {
+    it("zero contrast", () => {
+      score(0).should.equal("");
     });
-    it("AAA-level", function() {
-      expect(contrast.score(10)).to.eql("AAA");
+    it("AAA-level", () => {
+      score(10).should.equal("AAA");
     });
-    it("AA-level", function() {
-      expect(contrast.score(5)).to.eql("AA");
+    it("AA-level", () => {
+      score(5).should.equal("AA");
     });
   });
 
-  describe("#rgb", function() {
-    it("same color", function() {
-      expect(contrast.rgb(white, white)).to.eql(1);
+  describe("#rgb", () => {
+    it("same color", () => {
+      rgb(white, white).should.equal(1);
     });
-    it("same color", function() {
-      expect(contrast.rgb(white, black)).to.eql(21);
-    });
-  });
-
-  describe("#luminance", function() {
-    it("same color", function() {
-      expect(contrast.luminance(1, 1)).to.eql(1);
-    });
-    it("opposite luminance", function() {
-      expect(contrast.luminance(1, 0)).to.eql(21);
+    it("same color", () => {
+      rgb(white, black).should.equal(21);
     });
   });
 
-  describe("#hex", function() {
-    it("same color", function() {
-      expect(contrast.hex(whiteHex, whiteHex)).to.eql(1);
+  describe("#luminance", () => {
+    it("same color", () => {
+      luminance(1, 1).should.equal(1);
     });
-    it("opposite luminance", function() {
-      expect(contrast.hex(whiteHex, blackHex)).to.eql(21);
+    it("opposite luminance", () => {
+      luminance(1, 0).should.equal(21);
+    });
+  });
+
+  describe("#hex", () => {
+    it("same color", () => {
+      hex(whiteHex, whiteHex).should.equal(1);
+    });
+    it("opposite luminance", () => {
+      hex(whiteHex, blackHex).should.equal(21);
     });
   });
 });
