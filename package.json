@@ -26,7 +26,7 @@
   },
   "dependencies": {
     "relative-luminance": "0.0.1",
-    "hex-rgb": "~1.0.0"
+    "hex-rgb": "~2.0.0"
   },
   "devDependencies": {
     "documentation": "4.0.0",
