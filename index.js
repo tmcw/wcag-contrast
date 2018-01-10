@@ -43,7 +43,7 @@ function rgb(a, b) {
  * hex('#000', '#fff'); // = 21
  */
 function hex(a, b) {
-  return rgb(hexRgb(a), hexRgb(b));
+  return rgb(hexRgb(a, {format: 'array'}), hexRgb(b, {format: 'array'}));
 }
 
 /**
