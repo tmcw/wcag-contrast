@@ -1,49 +1,38 @@
-var expect = require("expect.js");
-var contrast = require("../");
+import tap from "tap";
+import { score, rgb, luminance, hex } from "../index.mjs";
 
-var white = [255, 255, 255];
-var black = [0, 0, 0];
+const { test } = tap;
 
-var whiteHex = "#ffffff";
-var blackHex = "#000000";
+tap.test("contrast", t => {
+  t.equal(1, 1);
+  t.end();
+});
 
-describe("contrast", function() {
-  describe("#score", function() {
-    it("zero contrast", function() {
-      expect(contrast.score(0)).to.eql("");
-    });
-    it("AAA-level", function() {
-      expect(contrast.score(10)).to.eql("AAA");
-    });
-    it("AA-level", function() {
-      expect(contrast.score(5)).to.eql("AA");
-    });
-  });
+test("#score", t => {
+  t.equal(score(0), "", "zero contrast");
+  t.equal(score(10), "AAA", "AAA");
+  t.equal(score(5), "AA", "AA");
+  t.end();
+});
 
-  describe("#rgb", function() {
-    it("same color", function() {
-      expect(contrast.rgb(white, white)).to.eql(1);
-    });
-    it("same color", function() {
-      expect(contrast.rgb(white, black)).to.eql(21);
-    });
-  });
+test("#rgb", t => {
+  const white = [255, 255, 255];
+  const black = [0, 0, 0];
+  t.equal(rgb(white, white), 1, "same color");
+  t.equal(rgb(white, black), 21, "same color");
+  t.end();
+});
 
-  describe("#luminance", function() {
-    it("same color", function() {
-      expect(contrast.luminance(1, 1)).to.eql(1);
-    });
-    it("opposite luminance", function() {
-      expect(contrast.luminance(1, 0)).to.eql(21);
-    });
-  });
+test("#luminance", t => {
+  t.equal(luminance(1, 1), 1, "same color");
+  t.equal(luminance(1, 0), 21, "opposite luminance");
+  t.end();
+});
 
-  describe("#hex", function() {
-    it("same color", function() {
-      expect(contrast.hex(whiteHex, whiteHex)).to.eql(1);
-    });
-    it("opposite luminance", function() {
-      expect(contrast.hex(whiteHex, blackHex)).to.eql(21);
-    });
-  });
+test("#hex", t => {
+  const whiteHex = "#ffffff";
+  const blackHex = "#000000";
+  t.equal(hex(whiteHex, whiteHex), 1, "same color");
+  t.equal(hex(whiteHex, blackHex), 21, "opposite luminance");
+  t.end();
 });
