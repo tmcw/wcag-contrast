@@ -31,7 +31,7 @@
     "relative-luminance": "0.0.1"
   },
   "devDependencies": {
-    "documentation": "5.3.5",
+    "documentation": "6.1.0",
     "esm": "^3.0.7",
     "prettier": "^1.11.1",
     "standard-version": "^4.3.0",
