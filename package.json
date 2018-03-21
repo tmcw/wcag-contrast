@@ -16,6 +16,9 @@
     "type": "git",
     "url": "git://github.com/tmcw/wcag-contrast.git"
   },
+  "files": [
+    "index.mjs"
+  ],
   "keywords": [
     "color",
     "contrast",
