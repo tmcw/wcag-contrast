@@ -30,7 +30,6 @@
     "url": "https://github.com/tmcw/wcag-contrast/issues"
   },
   "dependencies": {
-    "hex-rgb": "~2.0.0",
     "relative-luminance": "1.0.0"
   },
   "devDependencies": {
