@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.0"></a>
+# [1.2.0](https://github.com/tmcw/wcag-contrast/compare/v1.0.0...v1.2.0) (2018-04-16)
+
+
+### Bug Fixes
+
+* Move esm dependency out of devDeps ([26a1553](https://github.com/tmcw/wcag-contrast/commit/26a1553))
+
+
+### Features
+
+* Internalize hexRgb dependency, making this and its dependents all es6-safe ([def207c](https://github.com/tmcw/wcag-contrast/commit/def207c))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/tmcw/wcag-contrast/compare/v1.0.0...v1.1.0) (2018-03-21)
 

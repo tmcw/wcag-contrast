@@ -1,6 +1,6 @@
 {
   "name": "wcag-contrast",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "evaluate the wcag color contrast score for two colors",
   "main": "index.js",
   "module": "index.mjs",
