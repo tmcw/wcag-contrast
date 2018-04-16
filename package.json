@@ -31,7 +31,7 @@
   },
   "dependencies": {
     "esm": "^3.0.7",
-    "relative-luminance": "1.0.0"
+    "relative-luminance": "^1.0.2"
   },
   "devDependencies": {
     "documentation": "6.1.0",
