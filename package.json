@@ -34,7 +34,7 @@
     "relative-luminance": "^1.0.2"
   },
   "devDependencies": {
-    "documentation": "6.1.0",
+    "documentation": "7.1.0",
     "prettier": "^1.11.1",
     "standard-version": "^4.3.0",
     "tap": "^11.1.3"
