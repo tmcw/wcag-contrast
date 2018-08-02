@@ -1,4 +1,4 @@
-## wcag color constrast
+## wcag color contrast
 
 [![Build Status](https://travis-ci.org/tmcw/wcag-contrast.svg)](https://travis-ci.org/tmcw/wcag-contrast) [![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/wcag-contrast.svg)](https://greenkeeper.io/)
 
