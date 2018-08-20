@@ -1,6 +1,6 @@
 ## wcag color contrast
 
-[![Build Status](https://travis-ci.org/tmcw/wcag-contrast.svg)](https://travis-ci.org/tmcw/wcag-contrast) [![Greenkeeper badge](https://badges.greenkeeper.io/tmcw/wcag-contrast.svg)](https://greenkeeper.io/)
+[![CircleCI](https://circleci.com/gh/tmcw/wcag-contrast.svg?style=svg)](https://circleci.com/gh/tmcw/wcag-contrast)
 
 [WCAG](http://www.w3.org/WAI/intro/wcag.php) [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef)
 measurement and scoring.
