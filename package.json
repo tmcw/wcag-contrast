@@ -2,22 +2,24 @@
   "name": "wcag-contrast",
   "version": "1.2.0",
   "description": "evaluate the wcag color contrast score for two colors",
-  "main": "index.js",
-  "module": "index.mjs",
+  "source": "index.js",
+  "main": "dist/index.js",
+  "umd:main": "dist/index.umd.js",
+  "module": "dist/index.m.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "tap --node-arg=-r --node-arg=esm test/contrast.test.js",
-    "release": "standard-version",
-    "docs": "documentation readme index.js --section=API"
+    "test": "microbundle --external=none && tape test/*.js",
+    "release": "microbundle --external=none && standard-version",
+    "docs": "documentation readme index.js -s API index.js"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/tmcw/wcag-contrast.git"
   },
   "files": [
-    "index.mjs"
+    "dist"
   ],
   "keywords": [
     "color",
@@ -29,15 +31,12 @@
   "bugs": {
     "url": "https://github.com/tmcw/wcag-contrast/issues"
   },
-  "dependencies": {
-    "esm": "^3.0.7",
-    "relative-luminance": "^1.0.2"
-  },
   "devDependencies": {
     "documentation": "8.1.1",
+    "microbundle": "^0.6.0",
     "prettier": "^1.11.1",
+    "relative-luminance": "^2.0.0",
     "standard-version": "^4.3.0",
-    "tap": "^12.0.1"
-  },
-  "esm": true
+    "tape": "^4.9.1"
+  }
 }
