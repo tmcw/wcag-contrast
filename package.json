@@ -33,11 +33,13 @@
   "bugs": {
     "url": "https://github.com/tmcw/wcag-contrast/issues"
   },
+  "dependencies": {
+    "relative-luminance": "^2.0.0"
+  },
   "devDependencies": {
     "documentation": "8.1.1",
     "microbundle": "^0.6.0",
     "prettier": "^1.11.1",
-    "relative-luminance": "^2.0.0",
     "standard-version": "^4.3.0",
     "tape": "^4.9.1"
   }
