@@ -20,6 +20,7 @@
     "url": "git://github.com/tmcw/wcag-contrast.git"
   },
   "files": [
+    "index.js",
     "dist"
   ],
   "keywords": [
