@@ -40,7 +40,7 @@
     "documentation": "9.1.1",
     "microbundle": "^0.8.1",
     "prettier": "^1.11.1",
-    "standard-version": "^4.3.0",
+    "standard-version": "^5.0.0",
     "tape": "^4.9.1"
   }
 }
