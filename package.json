@@ -38,7 +38,7 @@
   },
   "devDependencies": {
     "documentation": "^9.2.0",
-    "microbundle": "^0.10.0",
+    "microbundle": "^0.11.0",
     "prettier": "^1.11.1",
     "standard-version": "^5.0.0",
     "tape": "^4.9.1"
