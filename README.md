@@ -2,8 +2,10 @@
 
 [![CircleCI](https://circleci.com/gh/tmcw/wcag-contrast.svg?style=svg)](https://circleci.com/gh/tmcw/wcag-contrast)
 
-[WCAG](http://www.w3.org/WAI/intro/wcag.php) [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef)
-measurement and scoring.
+This module produces [WCAG](http://www.w3.org/WAI/intro/wcag.php) [contrast ratio](http://www.w3.org/TR/WCAG20/#contrast-ratiodef)
+measurement and scoring. It's an accessibility standard, intended to make sure websites have high enough contrast to be readable by everyone, including people with [low vision](https://www.aao.org/eye-health/diseases/low-vision) and age-related vision problems. This module is a low-level utility, useful for its implementation of the underlying math: to test a page, you'll want to use something like Google Chrome’s [Lighthouse tools](https://developers.google.com/web/tools/lighthouse/), or the [axe extension](https://www.deque.com/axe/) for Chrome and Firefox.
+
+I (personally, speaking as Tom) have doubts about the [universality, accuracy, and application of this particular standard](https://macwright.org/2019/03/30/color-contrast-is-a-problem.html). High contrast is a good value, but I argue that the standard is over-strict and doesn't precisely match human perception.
 
 ## API
 
