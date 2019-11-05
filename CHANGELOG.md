@@ -1,6 +1,19 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [3.0.0](https://github.com/tmcw/wcag-contrast/compare/v2.1.2-0...v3.0.0) (2019-11-05)
+
+
+### ⚠ BREAKING CHANGES
+
+* alters the output of failing tests. If you're using the empty string as a failure status, please adjust to looking for 'Fail' instead.
+
+This adds `AA Large` from 3-4.5 and returns `'Fail'` when under 3 now. The empty string I think could be misconstrued as an error, since the output is not explicit.
+
+### Features
+
+* Support AA Large and Fail ([#57](https://github.com/tmcw/wcag-contrast/issues/57)) ([9dccf2a](https://github.com/tmcw/wcag-contrast/commit/9dccf2a24f9e20b9748379cb6d57970c76d5e844))
 
 <a name="2.1.2-0"></a>
 ## [2.1.2-0](https://github.com/tmcw/wcag-contrast/compare/v2.1.1...v2.1.2-0) (2018-09-24)
