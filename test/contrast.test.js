@@ -7,7 +7,7 @@ test("contrast", t => {
 });
 
 test("#score", t => {
-  t.equal(c.score(0), "", "zero contrast");
+  t.equal(c.score(0), "Fail", "zero contrast");
   t.equal(c.score(10), "AAA", "AAA");
   t.equal(c.score(5), "AA", "AA");
   t.end();
