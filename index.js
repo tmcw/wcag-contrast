@@ -78,5 +78,17 @@ export function hex(a, b) {
  * score(10); // = 'AAA'
  */
 export function score(contrast) {
-  return contrast >= 7 ? "AAA" : contrast >= 4.5 ? "AA" : "";
+  if (contrast  >= 7) {
+    return 'AAA';
+  }
+  
+  if (contrast >= 4.5) {
+    return 'AA';
+  }
+  
+  if (contrast >= 3) {
+    return 'AA Large';
+  }
+  
+  return 'Fail';
 }
